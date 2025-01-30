@@ -1,7 +1,12 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import AOS from "aos";
+
 
 export default function TabSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   const [activeTab, setActiveTab] = useState("Producer");
 
   const tabs = ["Producer", "Farmer", "Home Cook"];
@@ -18,7 +23,7 @@ export default function TabSection() {
           margin: "0px auto",
         }}
       >
-        <div className="max-w-6xl mx-auto px-4 text-center">
+        <div className="max-w-6xl mx-auto px-4 text-center" data-aos="zoom-in" data-aos-delay="500">
           <h1 className="text-[48px] md:text-5xl font-bold tracking-tight ">
             <span className="text-[#8cc63f]">Connecting Farmers</span> and Home Cooks <br /> for a Thriving Food <span className="text-[#8cc63f]">Community!</span>
           </h1>

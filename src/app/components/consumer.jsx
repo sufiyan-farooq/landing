@@ -1,14 +1,20 @@
-import React from 'react';
+'use client'
+import  { useEffect } from 'react';
 import { Check } from 'lucide-react';
+import AOS from 'aos';
+import React from 'react';
 
 function ConsumerSec() {
+    useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <div className=" bg-white">
       <div className=" mx-auto  mt-14">
         <div className="bg-[#F3F9ED]  h-fit p-8 pb-20 relative mx-auto  rounded-xl flex flex-wrap green-box  " >
           <div className="grid md:grid-cols-2  items-start">
             {/* Content - Reordered for mobile */}
-            <div className="col-span-full md:col-start-2 max-w-xl order-1">
+            <div className="col-span-full md:col-start-2 max-w-xl order-1" data-aos="fade-left" data-aos-delay="500">
               <span className="inline-block bg-[#E5F3D4] text-[#85C349] text-sm font-semibold px-3 py-1 rounded-full">
                 For Consumers
               </span>

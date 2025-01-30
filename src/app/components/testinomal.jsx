@@ -1,5 +1,4 @@
 'use client';
-import * as React from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -8,8 +7,14 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import AOS from "aos";
+import { useEffect } from 'react';
+
 
 export default function Testimonial() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   const cardData = [
     {
       image: '/vegOne.jpeg',
@@ -59,7 +64,7 @@ export default function Testimonial() {
 
   return (
     <div className="bg-[#F3F9ED] w-full h-fit p-5 pb-20 md:p-20 ">
-      <div className="Heading text-center pt-20 md:pt-20">
+      <div className="Heading text-center pt-20 md:pt-20" data-aos="zoom-in" data-aos-delay="600">
         <h1 className="text-3xl md:text-4xl lg:text-[48px] font-semibold">
           See what our <span className="text-[#85C349]">Clients Said </span> about us
         </h1>
@@ -75,6 +80,8 @@ export default function Testimonial() {
               <CarouselItem
                 key={index}
                 className="basis-full sm:basis-3/4 md:basis-1/2 lg:basis-1/3 px-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 200 + 600}
               >
                 <div className="p-1">
                   <div className="w-full bg-white rounded-2xl shadow-lg overflow-hidden mb-4">

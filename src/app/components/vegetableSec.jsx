@@ -1,12 +1,17 @@
-import React from 'react';
+'use client'
 
+import AOS from "aos";
+import React, { useEffect } from "react";
 
 
 function VegetableSec() {
+    useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <>
     <div className="relative  p-8   mt-28 , " style={{ backgroundImage: 'url(/graph-bg.jpg)',zIndex:"9999999",height:"800px",maxHeight:"1000px"}}>
-    <div className="max-w-6xl mx-auto px-4 text-center">
+    <div className="max-w-6xl mx-auto px-4 text-center" data-aos="zoom-in" data-aos-delay="800">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
           Start building your <span className="text-[#8cc63f]">market</span>
           <br />
