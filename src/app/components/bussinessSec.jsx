@@ -15,7 +15,7 @@ export default function BusinessSec() {
           <div className="mt-28">
             <div className="bg-[#F3F9ED]  w-11/12 md:w-4/5 h-fit p-12 rounded-3xl px-6 relative max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 items-center gap-4 green-box">
               {/* Left Content */}
-              <div className="left-content-text bg-red" data-aos="fade-right" data-aos-delay="500">
+              <div className="left-content-text bg-red" data-aos="zoom-in" data-aos-delay="500">
                 <span className="inline-block bg-[#E5F3D4] text-[#85C349] text-sm font-semibold px-4 py-1 rounded-full">
                   For Business
                 </span>
